@@ -1,0 +1,135 @@
+*{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+/* navigation in head.ejs */
+#navigation ul{
+    padding: 20px 0;
+}
+#navigation ul li{
+    margin: 0 10px;
+}
+#navigation ul a{
+    text-decoration: none;
+    color: darkcyan;
+}
+#navigation ul a:hover{
+    color: rgb(206, 107, 15);
+}
+
+
+
+
+/* signUp.ejs */
+#signUp{
+    font-weight: 200;
+}
+#signUp .container form{
+    background: gray;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 1px 1px 15px rgb(92, 55, 38);
+    margin: auto;
+}
+#signUp .signup input, #login .login input{
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background: #f0f0f077;
+}
+
+/* Chrome, Safari, Edge, Opera */
+#signUp .signup input::-webkit-outer-spin-button,
+#signUp .signup input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#signUp .signup input:focus, #login .login input:focus{
+    outline: none;
+    background: #fff;
+}
+#signUp .signup label, #login .login label{
+    cursor: pointer;
+    margin: 5px 0;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.247);
+    font-weight: 300;
+}
+#signUp .signup label:hover{
+    color: #fff;
+}
+
+
+#signUp .signup > div{
+    padding: 10px 15px;
+    margin: 5px 0;
+    height: 150px;
+}
+
+#signUp .signup > div div{
+    padding: 10px 15px;
+}
+
+#signUp .signup input[type="submit"]{
+    margin-top: 40px;
+    cursor: pointer;
+    color: green;
+    background: #fff;
+}
+
+#signUp .signup input[type="submit"]:hover{
+    color: #FFF;
+    background-image: linear-gradient(35deg,red,green,yellow);
+}
+
+.invalid-feedbackAzan{
+    color: orange;
+}
+
+@media screen and (min-width: 992px){
+    #signUp form, #login form{
+        width: 600px;
+        margin: auto;
+    }
+}
+
+.yeah-invalid{
+    border: 1px solid red !important;
+}
+
+/* login.ejs */
+#login form{
+    background:rgb(92, 55, 38);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#login .login > div {
+    margin-bottom: 20px;
+    height: 100px;
+}
+
+#login .login > div:last-child {
+    margin-top: 20px;
+    height: 50px;
+}
+
+#login .login label{
+    color: darkcyan;
+    font-weight: 400;
+}
+
+
+#login .login input[type="submit"]{
+    cursor: pointer;
+}

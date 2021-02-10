@@ -1,0 +1,36 @@
+<%- include('../../partials/header&footer/head') %>
+
+
+<div id="login">
+    <div class="container">
+        <form action="/auth/login" class="form" method="POST">
+            <h1 class="lead text-center text-success py-3">Sign In to your account!</h1>
+            <div id="name" class="login row">
+                <div class="col-sm-12">
+                    <label for="emailPhone">Email or Phone Number</label>
+                    <input name="emailPhone" type="text" id="emailPhone" class="<%= err.emailPhone ? 'yeah-invalid' : '' %>" value="<%= val.emailPhone?val.emailPhone:''%>">
+                    <div class="invalid-feedbackAzan">
+                        <%= err.emailPhone && err.emailPhone %>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <label for="password">Enter your password</label>
+                    <input name="password" type="password" id="password" class="<%= err.password ? 'yeah--invalid' : '' %>" value="<%= val.password?val.password:''%>">
+                    <div class="invalid-feedbackAzan">
+                        <%= err.password && err.password %>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <input type="submit" value="Log In">
+                </div>
+            </div>
+            <p class="text-center lead"><a href="/auth/signup" class="text-white">I don't have any account.</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+<%- include('../../partials/header&footer/footer') %> 
+</body>
+</html>

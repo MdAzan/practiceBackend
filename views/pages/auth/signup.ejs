@@ -1,0 +1,86 @@
+<%- include('../../partials/header&footer/head') %>
+
+<div id="signUp">
+    <div class="container">
+        <form action="/auth/signup" method="POST">
+            <div>
+                <h3 class="lead mt-3 text-info text-center">Create a account for yourself.</h3>
+            </div>
+            <div class="signup row">
+                <div class="col-sm-6">
+                    <label for="fname">First Name</label>
+                    <input name="firstName" type="text" id="fname" class="<%= err.firstName ? 'yeah-invalid' : '' %>" value="<%= val.firstName?val.firstName:''%>">
+                    <div class="invalid-feedbackAzan">
+                        <%= err.firstName && err.firstName %>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="lname">Last Name</label>
+                    <input name="lastName" type="text" id="lname" class="<%= err.lastName ? 'yeah-invalid' : '' %>" value="<%= val.lastName?val.lastName:''%>">
+                    <div class="invalid-feedbackAzan">
+                        <%= err.lastName && err.lastName %>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="college">College Name</label>
+                    <input name="collegeName" type="text" id="college"  class="<%= err.collegeName ? 'yeah-invalid' : '' %>" value="<%= val.collegeName?val.collegeName:''%>">
+                    <div class="invalid-feedbackAzan">
+                        <%= err.collegeName && err.collegeName %>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="session">Session Name</label>
+                    <input name="sessionName" type="text" id="session" class="<%= err.sessionName ? 'yeah-invalid' : '' %>" value="<%= val.sessionName?val.sessionName:''%>">
+                    <div class="invalid-feedbackAzan">
+                        <%= err.sessionName && err.sessionName %>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="email">Enter your email address</label>
+                    <input name="email" type="email" id="email" class="<%= err.email ? 'yeah-invalid' : '' %>" value="<%= val.email?val.email:''%>">
+                    <div class="invalid-feedbackAzan">
+                        <%= err.email && err.email %>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="phone">Enter your phone number</label>
+                    <input name="phone" type="number" id="phone" class="<%= err.phone ? 'yeah-invalid' : '' %>" value="<%= val.phone?val.phone:''%>">
+                    <div class="invalid-feedbackAzan">
+                        <%= err.phone && err.phone %>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="password">Enter a strong password</label>
+                    <input name="password" type="password" id="password" class="<%= err.password ? 'yeah-invalid' : '' %>" value="<%= val.password?val.password:''%>">
+                    <div class="invalid-feedbackAzan">
+                        <%= err.password && err.password %>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="confirmPassword">Confirm your password.</label>
+                    <input name="confirmPassword" type="password" id="confirmPassword" class="<%= err.confirmPassword ? 'yeah-invalid' : '' %>" value="<%= val.confirmPassword?val.confirmPassword:''%>">
+                    <div class="invalid-feedbackAzan">
+                        <%= err.confirmPassword && err.confirmPassword %>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="address">Adress</label>
+                    <input name="address" type="text" id="address" class="<%= err.address ? 'yeah-invalid' : '' %>" value="<%= val.address?val.address:''%>">
+                    <div class="invalid-feedbackAzan">
+                        <%= err.address && err.address %>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <input type="submit" value="Create Account">
+                </div>
+            </div>
+            <p class="text-center lead"><a href="/auth/login" class="text-dark">I already have an account.</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+<%- include('../../partials/header&footer/footer') %>
+</body>
+</html>
